@@ -1,0 +1,10 @@
+@OnlineStrore_HostAddress = https://localhost:7291
+
+GET {{OnlineStrore_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{OnlineStrore_HostAddress}}/weatherforecast
+
+###

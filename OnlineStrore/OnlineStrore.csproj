@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Images\**" />
+    <Content Remove="Views\Images\**" />
+    <EmbeddedResource Remove="Views\Images\**" />
+    <None Remove="Views\Images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineStore.Logic\OnlineStore.Logic.csproj" />
+    <ProjectReference Include="..\OnlineStore.Storage.MS_SQL\OnlineStore.Storage.MS_SQL.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,121 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\logo-pegas-touristik.jpg",
+      "PackagePath": "staticwebassets\\images\\logo-pegas-touristik.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\logo.svg",
+      "PackagePath": "staticwebassets\\images\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\medium_dadd0ca6abcb34db788d937f8b7fde91.png",
+      "PackagePath": "staticwebassets\\images\\medium_dadd0ca6abcb34db788d937f8b7fde91.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\авиа1.png",
+      "PackagePath": "staticwebassets\\images\\авиа1.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\авиа2.png",
+      "PackagePath": "staticwebassets\\images\\авиа2.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\авиа3.png",
+      "PackagePath": "staticwebassets\\images\\авиа3.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\авиа4.png",
+      "PackagePath": "staticwebassets\\images\\авиа4.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\авиа5.png",
+      "PackagePath": "staticwebassets\\images\\авиа5.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\страх1.png",
+      "PackagePath": "staticwebassets\\images\\страх1.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\страх2.png",
+      "PackagePath": "staticwebassets\\images\\страх2.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\страх3.png",
+      "PackagePath": "staticwebassets\\images\\страх3.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\страх4.png",
+      "PackagePath": "staticwebassets\\images\\страх4.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\страх5.png",
+      "PackagePath": "staticwebassets\\images\\страх5.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\тур1.png",
+      "PackagePath": "staticwebassets\\images\\тур1.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\тур2.png",
+      "PackagePath": "staticwebassets\\images\\тур2.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\тур3.png",
+      "PackagePath": "staticwebassets\\images\\тур3.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\тур4.png",
+      "PackagePath": "staticwebassets\\images\\тур4.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\тур5.png",
+      "PackagePath": "staticwebassets\\images\\тур5.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\экс1.png",
+      "PackagePath": "staticwebassets\\images\\экс1.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\экс2.png",
+      "PackagePath": "staticwebassets\\images\\экс2.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\экс3.png",
+      "PackagePath": "staticwebassets\\images\\экс3.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\экс4.png",
+      "PackagePath": "staticwebassets\\images\\экс4.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\images\\экс5.png",
+      "PackagePath": "staticwebassets\\images\\экс5.png"
+    },
+    {
+      "Id": "C:\\Users\\ivans\\OneDrive\\Рабочий стол\\Travel_Agency\\OnlineStrore\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.OnlineStrore.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.OnlineStrore.props",
+      "PackagePath": "build\\OnlineStrore.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.OnlineStrore.props",
+      "PackagePath": "buildMultiTargeting\\OnlineStrore.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.OnlineStrore.props",
+      "PackagePath": "buildTransitive\\OnlineStrore.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

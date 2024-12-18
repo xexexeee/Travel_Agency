@@ -1,0 +1,103 @@
+﻿@using OnlineStrore.Logic.Queries.Product.GetProduct
+
+@model ProductVm
+@{
+    Layout = "~/Views/Layout.cshtml";
+}
+
+<style>
+    /* Общий контейнер страницы */
+    .content {
+        padding: 30px;
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+    }
+
+    /* Заголовок продукта */
+    h1 {
+        color: #343a40;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    /* Контейнер для деталей продукта */
+    .product-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+        /* Стили для изображения */
+        .product-details img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+    /* Информация о продукте */
+    .product-info {
+        max-width: 400px;
+        flex: 1;
+        color: #495057;
+    }
+
+        .product-info p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+            .product-info p b {
+                font-size: 22px;
+                color: #007bff;
+            }
+
+    /* Кнопка "Добавить в корзину" */
+    .add-to-cart-button {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: #28a745;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+        .add-to-cart-button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+</style>
+
+<div class="content">
+    <h1>@Model.Name</h1>
+    <div class="product-details">
+        <!-- Картинка продукта -->
+        <img src="@Url.Content(Model.ImageUrl)" alt="@Model.Name">
+
+        <!-- Информация о продукте -->
+        <div class="product-info">
+            <p><b>Цена: @Model.Cost.ToString() р</b></p>
+            <p><b>Описание:</b><br>@Model.Characteristics</p>
+            <p><b>Количество в наличии:</b> @Model.CountOfProduct</p>
+            <button onclick="addToCart('@Model.Id')">Добавить в корзину</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,109 @@
+﻿@using OnlineStrore.Logic.Queries.Product.GetProductList
+
+
+@model ProductListVm
+@{
+    Layout = "~/Views/Layout.cshtml";
+}
+<style>
+    /* Общие стили для страницы */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa; /* Светлый фон страницы */
+    }
+
+    h1 {
+        color: #343a40; /* Темный цвет заголовка */
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #6c757d; /* Серый цвет текста */
+        font-size: 16px;
+    }
+
+    /* Каталог товаров */
+    .catalog-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Центрирование товаров */
+        gap: 20px; /* Отступы между карточками */
+        padding: 20px;
+    }
+
+        /* Карточка товара */
+        .catalog-flex div {
+            background-color: #ffffff; /* Белый фон карточки */
+            border-radius: 10px; /* Скругленные углы */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для объема */
+            transition: transform 0.3s, box-shadow 0.3s; /* Плавный эффект при наведении */
+            width: 250px;
+            overflow: hidden;
+        }
+
+            .catalog-flex div:hover {
+                transform: translateY(-10px); /* Поднимаем карточку при наведении */
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Усиливаем тень при наведении */
+            }
+
+        /* Изображение товара */
+        .catalog-flex img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Обеспечиваем заполнение контейнера */
+            border-bottom: 1px solid #e9ecef; /* Линия разделения */
+        }
+
+        /* Информация о товаре */
+        .catalog-flex p {
+            padding: 15px;
+            margin: 0;
+            text-align: center;
+            font-size: 16px;
+            color: #495057;
+        }
+
+            .catalog-flex p b {
+                color: #007bff; /* Синий цвет цены */
+                font-size: 18px;
+            }
+
+            .catalog-flex p i {
+                color: #6c757d; /* Серый цвет имени товара */
+                display: block;
+                margin-top: 5px;
+            }
+
+        /* Кнопка перехода */
+        .catalog-flex a {
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+</style>
+
+<div class="content">
+    <p>Выберите товар, который вас интересует, и перейдите на страницу с подробным описанием.</p>
+
+    <!-- Выводим товары в виде таблицы -->
+    @* <table align="center" cellpadding="10"> *@
+        <div class="catalog-flex">
+            @foreach (var product in Model.Products)
+            {
+                <div>
+                    <!-- Ссылка на страницу с полным описанием товара -->
+                    <a href="@Url.Action("Details", "Product", new {id = product.Id})">
+                        <!-- Картинка товара -->
+                        <img src="@Url.Content(product.ImageUrl)" alt="@product.Name" width="400" height="300">
+                    </a>
+                    <!-- Цена и название товара -->
+                    <p>
+                        <b>@product.Cost.ToString() р</b><br>
+                        <i>@product.Name</i>
+                    </p>
+                </div>
+            }
+        </div>
+    @* </table> *@
+</div>

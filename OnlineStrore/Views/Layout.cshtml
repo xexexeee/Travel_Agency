@@ -1,0 +1,147 @@
+﻿@using OnlineStrore.ViewModels
+<!DOCTYPE html>
+@* @model ClientView *@
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Pegas</title>
+
+    <!-- Подключаем стили -->
+    <link href="@Url.Content("~/css/styles.css")" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+   @*  @(ViewData["clientName"] = ViewData["clientName"])
+    @Html.Partial("~/Views/Shared/header.cshtml"); *@
+    <style>
+        .header-container {
+            background-color: #1a1a2e;
+            padding: 20px 40px;
+            border-bottom: 2px solid #0f3460;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+            .logo img {
+                height: 80px;
+            }
+
+            .logo h1 {
+                color: #e94560;
+                font-size: 2rem;
+                font-family: 'Arial', sans-serif;
+            }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .guest-actions, .user-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-btn {
+            background-color: #0f3460;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+            .header-btn:hover {
+                background-color: #e94560;
+                transform: scale(1.05);
+            }
+
+        .client-name {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .cart-count {
+            color: #e94560;
+            font-weight: bold;
+        }
+
+    </style>
+    <header class="header-container">
+        <div class="header-content">
+            <div class="logo">
+                <img src="https://storage.yandexcloud.net/web-cterx/logo-pegas-touristik.jpg" alt="ЛОГОТИП">
+                <h1>Pegas</h1>
+            </div>
+            <div class="header-actions">
+                @if (ViewData["clientName"] == null)
+                {
+                    <div class="guest-actions">
+                        <a href="@Url.Action("Login", "Client")" class="header-btn">Войти</a>
+                        <a href="@Url.Action("Create", "Client")" class="header-btn">Регистрация</a>
+                    </div>
+                }
+                else
+                {
+                    <div class="user-info">
+                        <h2 class="client-name">@ViewData["clientName"].ToString()</h2>
+                        <div class="user-actions">
+                            <button onclick="showCartModal()" class="header-btn">
+                                Корзина (<span id="cart-count" class="cart-count"></span>)
+                            </button>
+                            <a href="@Url.Action("Feedback", "Client")" class="header-btn">Оставить отзыв</a>
+                            <a href="@Url.Action("Logout", "Client")" class="header-btn">Выйти</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигационная панель -->
+    @Html.Partial("~/Views/Shared/navbar.cshtml")
+
+    <!-- Основной контент страницы -->
+    <div class="main-content">
+        <!-- Навигационная панель -->
+        @Html.Partial("~/Views/Shared/sidebar.cshtml")
+        <div class="content">
+            @RenderBody()
+        </div>
+    </div>
+
+    @* Для корзины  *@
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideCartModal()">&times;</span>
+            <h2>Ваша корзина</h2>
+            <div id="cartItems">
+                <!-- Содержимое корзины будет загружено здесь -->
+            </div>
+        </div>
+    </div>
+    <!-- Футер сайта -->
+    @Html.Partial("~/Views/Shared/footer.cshtml")
+
+    <!-- Подключение JavaScript файлов -->
+    <script src="~/js/scripts.js"></script>
+</body>
+</html>

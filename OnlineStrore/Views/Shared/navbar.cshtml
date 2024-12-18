@@ -1,0 +1,171 @@
+﻿<style>
+    /* Общий стиль навигации */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to right, #004d79, #0073a8);
+        padding: 20px 40px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 8px;
+        /* margin: 20px auto; */
+    }
+
+        /* Стили ссылок */
+        nav a {
+            text-decoration: none;
+            color: #004d79;
+            font-size: 16px;
+            font-weight: 600;
+            margin-right: 15px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+            nav a:hover {
+                background: #ffffff;
+                color: #004d79;
+                transform: scale(1.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            /* Последний элемент без отступа */
+            nav a:last-child {
+                margin-right: 0;
+            }
+
+    /* Секция поиска */
+    .search {
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 5px;
+    }
+
+        .search input {
+            border: none;
+            background: transparent;
+            color: #ffffff;
+            font-size: 14px;
+            padding: 10px;
+            outline: none;
+            width: 200px;
+            transition: width 0.3s ease;
+        }
+
+            .search input::placeholder {
+                color: #d9d9d9;
+                font-style: italic;
+            }
+
+            .search input:focus {
+                width: 300px;
+            }
+
+        .search button {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        }
+
+            .search button:hover {
+                color: #ff6b6b;
+                transform: rotate(90deg);
+            }
+
+    /* Результаты поиска */
+    /* Результаты поиска */
+    .search-results {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 300px;
+        background: #ffffff; /* Яркий фон для контраста */
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        display: none;
+        z-index: 10;
+    }
+
+    .search-results-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #0073a8;
+        font-size: 16px; /* Увеличенный размер шрифта */
+        font-weight: 600;
+        color: #004d79;
+    }
+
+    .search-results .close-button {
+        background: none;
+        border: none;
+        color: #ff6b6b;
+        cursor: pointer;
+        font-size: 18px; /* Немного больше кнопка закрытия */
+    }
+
+    .search-results ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        max-height: 200px;
+        overflow-y: auto;
+        color: #004d79; /* Цвет текста */
+        font-size: 16px; /* Увеличенный размер шрифта */
+        line-height: 1.6; /* Увеличенное межстрочное расстояние */
+    }
+
+        .search-results ul li {
+            padding: 10px; /* Больше отступов для улучшения читаемости */
+            border-bottom: 1px solid #e0e0e0; /* Светлая линия разделителя */
+            font-size: 16px; /* Увеличенный шрифт для лучшей видимости */
+            cursor: pointer;
+            color: #004d79; /* Основной текст темно-синий */
+            background-color: #ffffff; /* Яркий белый фон */
+            transition: all 0.3s ease;
+        }
+
+            .search-results ul li:hover {
+                background: #f5f5f5; /* Очень светлый серый фон при наведении */
+                color: #0073a8; /* Ярко-синий текст при наведении */
+                font-weight: 600; /* Жирный текст для акцента */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкая тень для выделения */
+            }
+
+    /* Отображение результатов поиска */
+    .search-results.show {
+        display: block;
+    }
+
+
+</style>
+
+<nav>
+    <a href="@Url.Action("Catalog", "Product", new{TypeName = "Экскурсионные программы"})">Экскурсионные программы</a>
+    <a href="@Url.Action("Catalog", "Product", new{TypeName = "Авиабилеты"})">Авиабилеты</a>
+    <a href="@Url.Action("Catalog", "Product", new{TypeName = "Страховка для путешествий"})">Страховка для путешествий</a>
+    <a href="@Url.Action("Catalog", "Product", new{TypeName = "Пакетные туры"})">Пакетные туры</a>
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="Поиск по сайту..." />
+        <button type="button" id="clearButton">✖️</button>
+        <div id="searchResults" class="search-results">
+            <div class="search-results-header">
+                <span>Результаты поиска</span>
+                <button class="close-button">✖️</button>
+            </div>
+            <ul class="resultsList" id="resultsList"></ul>
+        </div>
+    </div>
+</nav>
+

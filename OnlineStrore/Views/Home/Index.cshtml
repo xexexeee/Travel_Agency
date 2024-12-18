@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "~/Views/Layout.cshtml";
+}
+
+<!-- Контент -->
+<div class="content">
+    <h1 align="center">О компании</h1>
+    <p>
+        <b>Компания PEGAS</b> — ваш надежный гид в мире путешествий, объединяющий комфорт, качество и доступность. Мы гордимся многолетним опытом работы, помогая нашим клиентам открывать новые горизонты и создавать незабываемые впечатления.
+    </p>
+    <p>
+        Мы предлагаем <b>разнообразие услуг:</b> от организации туров в экзотические страны до планирования семейных поездок и бизнес-туров. Наша команда профессионалов обеспечивает высокий уровень сервиса, учитывая все ваши пожелания, чтобы сделать каждую поездку максимально комфортной и приятной.
+    </p>
+
+    <h2>Примеры наших путешествий:</h2>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <a href="@Url.Action("Catalog", "Product", new { TypeName = "Экскурсионные программы" })">
+                        <img src="https://storage.yandexcloud.net/web-cterx/%D1%82%D1%83%D1%802.png" alt="Пляжный отдых">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="@Url.Action("Catalog", "Product", new { TypeName = "Экскурсионные программы" })">
+                        <img src="https://storage.yandexcloud.net/web-cterx/%D1%82%D1%83%D1%805.png" alt="Горный туризм">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="@Url.Action("Catalog", "Product", new { TypeName = "Экскурсионные программы" })">
+                        <img src="https://storage.yandexcloud.net/web-cterx/%D1%82%D1%83%D1%804.png" alt="Экзотические направления">
+                    </a>
+                </div>
+            </div>
+            <div class="controls">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <h2>Наши самые популярные направления</h2>
+    <table border="1" cellpadding="10" cellspacing="5">
+        <tr>
+            <td rowspan="3"><h3>Наши самые популярные направления</h3></td>
+            <td colspan="2" align="center"><h3>Туры</h3></td>
+        </tr>
+        <tr>
+            <td>Пляжные туры</td>
+            <td>Экскурсионные туры</td>
+        </tr>
+        <tr>
+            <td>Горнолыжные курорты</td>
+            <td>Круизы</td>
+        </tr>
+    </table>
+
+    <h2>Факты о нас:</h2>
+    <ul>
+        <li>Большой выбор туристических направлений</li>
+        <li>Индивидуальный подход к каждому путешественнику</li>
+        <li>Гарантия высокого уровня сервиса</li>
+    </ul>
+</div>
